@@ -1,0 +1,31 @@
+{
+  "name": "nano-design",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "author": "kim",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leezhian/nano-design.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite-plugin-svgr": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "sass": "^1.54.9",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}

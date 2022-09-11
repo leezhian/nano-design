@@ -1,0 +1,88 @@
+@import './variable.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5715;
+}
+
+body {
+  margin: 0;
+  color: $text-color;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+[tabindex='-1']:focus {
+  outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: $heading-color;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 500;
+}
+
+dd {
+  margin-bottom: 0.5em;
+  margin-left: 0; // Undo browser default
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  -webkit-text-decoration-skip: objects;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:active {
+    color: $link-active-color;
+  }
+
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+
+  &[disabled] {
+    color: $disabled-color;
+    cursor: not-allowed;
+  }
+}

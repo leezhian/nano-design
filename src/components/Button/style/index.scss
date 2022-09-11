@@ -1,0 +1,245 @@
+@import '@/components/style/variable.scss';
+
+$button-mini-height: 24px;
+$button-small-height: 32px;
+$button-default-height: 44px;
+$button-large-height: 50px;
+
+.#{$nano-prefix} {
+  &-button {
+    position: relative;
+    display: inline-block;
+    padding: 0 16px;
+    height: $button-default-height;
+    border: 1px solid transparent;
+    border-color: $border-color-base;
+    border-radius: $border-radius-base;
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: center;
+    color: $text-color;
+    background: #ffffff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    touch-action: manipulation;
+
+    > span {
+      display: inline-block;
+    }
+
+    > .#{$nano-prefix}-button-loading-icon {
+      display: inline-block;
+      padding-right: 8px;
+      transition: width 0.3s;
+    }
+
+    &.#{$nano-prefix}-button-loading {
+      position: relative;
+      cursor: default;
+    }
+
+    &[disabled] {
+      color: rgba(0, 0, 0, 0.4);
+      border-color: $border-color-base;
+      background: #f5f5f5;
+      cursor: not-allowed;
+    }
+
+    &:not([disabled]):hover {
+      color: $primary-hover-color;
+      border-color: $primary-hover-color;
+      background-color: #fff;
+    }
+  }
+
+  &-button-round {
+    border-radius: $button-default-height;
+
+    &-button-mini {
+      border-radius: $button-mini-height;
+    }
+
+    &-button-small {
+      border-radius: $button-small-height;
+    }
+
+    &-button-large {
+      border-radius: $button-large-height;
+    }
+  }
+
+  &-button-circle {
+    border-radius: 50%;
+  }
+
+  // 按钮大小
+  &-button-mini {
+    padding: 0 4px;
+    height: $button-mini-height;
+    font-size: 10px;
+  }
+
+  &-button-small {
+    padding: 0 8px;
+    height: $button-small-height;
+    font-size: 12px;
+  }
+
+  &-button-large {
+    padding: 0 20px;
+    height: $button-large-height;
+    font-size: 16px;
+  }
+
+  // 按钮类型
+  // 主按钮
+  &-button-primary {
+    color: #fff;
+    border-color: $primary-color;
+    background: $primary-color;
+
+    &[disabled] {
+      color: rgba(0, 0, 0, 0.4);
+      border-color: $border-color-base;
+      background: #f5f5f5;
+    }
+
+    &:not([disabled]):hover {
+      color: #fff;
+      border-color: $primary-hover-color;
+      background-color: $primary-hover-color;
+    }
+  }
+
+  // 虚按钮
+  &-button-dashed {
+    color: $text-color;
+    border-color: $border-color-base;
+    background: #fff;
+    border-style: dashed;
+
+    &[disabled] {
+      color: rgba(0, 0, 0, 0.4);
+      border-color: $border-color-base;
+      background: #f5f5f5;
+    }
+  }
+
+  // 文本按钮
+  &-button-text {
+    color: $text-color;
+    border-color: transparent;
+    background: 0 0;
+
+    &[disabled] {
+      color: rgba(0, 0, 0, 0.4);
+      border-color: transparent;
+      background: 0 0;
+    }
+
+    &:not([disabled]):hover {
+      color: $text-color;
+      border-color: transparent;
+      background: rgba(0, 0, 0, 0.018);
+    }
+  }
+
+  // 链接按钮
+  &-button-link {
+    color: $primary-color;
+    border-color: transparent;
+    background: 0 0;
+
+    &[disabled] {
+      color: rgba(0, 0, 0, 0.4);
+      border-color: transparent;
+      background: 0 0;
+    }
+
+    &:not([disabled]):hover {
+      color: $link-hover-color;
+      border-color: transparent;
+      background: 0 0;
+    }
+  }
+
+  // 危险按钮
+  &-button-dangerous {
+    color: $error-color;
+    border-color: $error-color;
+    background: #fff;
+
+    &.#{$nano-prefix} {
+      &-button-primary {
+        color: #fff;
+        border-color: $error-color;
+        background: $error-color;
+
+        &[disabled] {
+          color: rgba(0, 0, 0, 0.4);
+          border-color: $border-color-base;
+          background: #f5f5f5;
+        }
+      }
+
+      &-button-text {
+        color: $error-color;
+        border-color: transparent;
+        background: 0 0;
+
+        &[disabled] {
+          color: rgba(0, 0, 0, 0.4);
+          border-color: transparent;
+          background: 0 0;
+        }
+      }
+
+      &-button-link {
+        color: $error-color;
+        border-color: transparent;
+        background: 0 0;
+
+        &[disabled] {
+          color: rgba(0, 0, 0, 0.4);
+          border-color: transparent;
+          background: 0 0;
+        }
+      }
+    }
+  }
+
+  &-button {
+    &.#{$nano-prefix}-button-block {
+      width: 100%;
+    }
+
+    &.#{$nano-prefix}-button-ghost {
+      color: #fff;
+      border-color: #fff;
+      background: 0 0;
+
+      &[disabled] {
+        color: rgba(0, 0, 0, 0.4);
+        border-color: $border-color-base;
+        background: 0 0;
+      }
+    }
+  }
+
+  // 幽灵按钮
+  &-button-ghost {
+    &.#{$nano-prefix} {
+      &-button-primary {
+        color: $primary-color;
+        border-color: $primary-color;
+      }
+
+      &-button-dangerous {
+        color: $error-color;
+        border-color: $error-color;
+      }
+    }
+  }
+}

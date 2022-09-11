@@ -1,0 +1,30 @@
+@import '@/components/style/variable.scss';
+
+.#{$nano-prefix} {
+  &-icon {
+    display: inline-block;
+    color: inherit;
+    line-height: 0;
+    vertical-align: -0.125em;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    text-transform: none;
+
+    svg {
+      display: inline-block;
+    }
+  }
+
+  &-icon-spin {
+    display: inline-block;
+    animation: #{$nano-prefix}-rotate 1s infinte linear;
+  }
+
+  &-icon-loading {
+    animation: #{$nano-prefix}-rotate 2s linear infinite;
+
+    circle {
+      animation: #{$nano-prefix}-circular 1.5s ease-in-out infinite;
+    }
+  }
+}
