@@ -3,7 +3,7 @@
  * @Date: 2022-08-17 16:54:17
  * @Description: 导航栏
  */
-import React, { FC, useCallback } from 'react'
+import { FC, ReactNode, useCallback } from 'react'
 import classNames from 'classnames'
 import { getPrefixCls } from '@/components/config'
 import IconLeft from '@/assets/images/icon-left.png'
@@ -14,7 +14,7 @@ export interface NavBarProps {
   title?: string // 标题
   fixed?: boolean // 是否固定在顶部, 默认false
   ghost?: boolean // 是否是幽灵导航栏, 即透明底, 默认false
-  extra?: React.ReactElement
+  extra?: ReactNode
   zIndex?: string | number // 导航栏 z-index
   onLeftClick?: () => void
 }

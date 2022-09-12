@@ -4,6 +4,13 @@ import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
+  build: {
+    lib: {
+      entry: resolve(__dirname, './index.js'),
+      name: 'nano',
+      fileName: 'nanod'
+    }
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')
