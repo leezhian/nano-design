@@ -1,0 +1,29 @@
+@import '@/components/style/variable.scss';
+
+.#{$nano-prefix} {
+  &-tag {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    padding: 0 7px;
+    border-radius: $border-radius-base;
+    border: 1px solid $border-color-base;
+    color: $text-color;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+    background: #fafafa;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  &-tag-checkable {
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &-tag-checkable-checked {
+    color: #fff;
+    background-color: $primary-color;
+  }
+}

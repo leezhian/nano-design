@@ -1,2 +1,12 @@
-export { default as Button } from './Button';
-export type { ButtonProps } from './Button';
+export { default as Button } from './Button'
+export type { ButtonProps } from './Button'
+export { default as Icon } from './Icon'
+export type { IconProps } from './Icon'
+export { default as Tag } from './Tag'
+export type { TagProps, CheckableTagProps } from './Tag'
+export { default as Empty } from './Empty'
+export type { EmptyProps } from './Empty'
+export { default as Switch } from './Switch'
+export type { SwitchProps } from './Switch'
+export { default as Spin } from './Spin'
+export type { SpinProps } from './Spin'

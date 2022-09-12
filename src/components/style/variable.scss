@@ -2,12 +2,12 @@ $nano-prefix: 'nano';
 
 $white: #ffffff;
 $black: #000000;
+$normal-color: #d9d9d9;
 
 $primary-color: #007aff; // 全局主色
 $primary-hover-color: #409cff;
 $primary-active-color: #409cff;
-
-
+$warn-color: #ff9500;
 $error-color: #ff3b30; // 错误颜色
 $disabled-color: rgba(0, 0, 0, 0.25); // 失效色
 
@@ -20,7 +20,7 @@ $link-hover-color: #409cff;
 $link-active-color: #409cff;
 
 $border-radius-base: 4px; // 组件/浮层圆角
-$border-color-base: rgb(199,199,204);
+$border-color-base: #c7c7cc;
 
 $font-size-base: 14px; // 主字号
 $line-height-base: 1.15;

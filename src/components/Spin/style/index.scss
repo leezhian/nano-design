@@ -1,0 +1,86 @@
+@import '@/components/style/variable.scss';
+
+// 包装器
+.#{$nano-prefix}-spin-nested-loading {
+  position: relative;
+
+  > div {
+    .#{$nano-prefix}-spin {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-height: 400px;
+      z-index: 4;
+
+      // 显示文本
+      &.#{$nano-prefix}-spin-show-text {
+        .#{$nano-prefix}-spin-indicator {
+          margin-top: -30px;
+        }
+      }
+
+      .#{$nano-prefix}-spin-indicator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -15px;
+      }
+
+      .#{$nano-prefix}-spin-text {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        padding-top: 5px;
+        text-shadow: 0 1px 2px #fff;
+      }
+    }
+  }
+
+  .#{$nano-prefix}-spin-container {
+    position: relative;
+    transition: opacity 0.3s;
+  }
+
+  .#{$nano-prefix}-spin-blur {
+    clear: both;
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+// 加载指示器
+.#{$nano-prefix} {
+  &-spin {
+    box-sizing: border-box;
+    display: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    color: $primary-color;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  // 加载中
+  &-spin-spinning {
+    display: inline-block;
+    position: static;
+    opacity: 1;
+  }
+
+  &-spin-text {
+    display: block;
+    color: $text-color-secondary;
+  }
+
+  &-spin-indicator {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 0;
+  }
+}

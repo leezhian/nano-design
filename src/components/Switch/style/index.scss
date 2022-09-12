@@ -1,0 +1,68 @@
+@import '@/components/style/variable.scss';
+
+$switch-width: 2em;
+$switch-height: 1em;
+$switch-size: 30px;
+$switch-disabled-opacity: 0.4;
+
+.#{$nano-prefix} {
+  &-switch {
+    position: relative;
+    display: inline-block;
+    width: $switch-width;
+    height: $switch-height;
+    font-size: $switch-size;
+    line-height: $switch-size;
+    vertical-align: middle;
+    border-radius: $switch-height;
+    border: 0;
+    background-color: #aeaeb2;
+    transition: all 0.2s;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &-switch-checked {
+    background-color: $primary-color;
+
+    .#{$nano-prefix}-switch-handle {
+      left: calc($switch-width - $switch-height + 2px);
+    }
+
+    .#{$nano-prefix}-switch-loading-icon {
+      color: $primary-color;  
+    }
+  }
+
+  &-switch-handle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc($switch-height - 4px);
+    height: calc($switch-height - 4px);
+    border-radius: 50%;
+    background-color: $white;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1), 0px 0px 2px 0px rgba(0,0,0,0.2);
+    transition: all .2s ease-in-out;
+  }
+
+  &-switch-loading, &-switch-disabled {
+    cursor: not-allowed;
+    opacity: $switch-disabled-opacity;
+  }
+
+  &-switch-loading-icon {
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    vertical-align: top;
+    line-height: 0;
+    color: $text-color;
+    // animation: #{$nano-prefix}-rotate 1s infinite linear;
+
+    svg {
+      width: calc($switch-height - 8px);
+      height: calc($switch-height - 8px);
+    }
+  }
+}

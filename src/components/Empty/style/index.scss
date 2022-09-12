@@ -1,0 +1,24 @@
+@import '@/components/style/variable.scss';
+
+.#{$nano-prefix} {
+  &-empty {
+    margin: 0 8px;
+    text-align: center;
+
+    img,
+    svg {
+      height: 100%;
+      margin: auto;
+    }
+
+    &.#{$nano-prefix}-empty-normal {
+      margin: 32px 0;
+      color: $text-color-secondary;
+    }
+
+    .#{$nano-prefix}-empty-image {
+      height: 40px;
+      margin-bottom: 8px;
+    }
+  }
+}
