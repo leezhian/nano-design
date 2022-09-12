@@ -1,0 +1,65 @@
+@import '@/components/style/variable.scss';
+@import '@/components/style/mixin.scss';
+
+$navbar-height: 46px;
+
+.#{$nano-prefix}-navbar {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: $navbar-height;
+  text-align: center;
+  background-color: #fff;
+  user-select: none;
+  @include notch-pt;
+
+  &.#{$nano-prefix} {
+    &-navbar-ghost {
+      background-color: transparent;
+    }
+
+    &-navbar-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .#{$nano-prefix} {
+    &-navbar-left,
+    &-navbar-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 14px;
+      color: $heading-color;
+      cursor: pointer;
+    }
+
+    &-navbar-left {
+      left: 0;
+      padding: 0 8px;
+    }
+
+    &-navbar-right {
+      right: 0;
+    }
+
+    &-navbar-title {
+      max-width: 60%;
+      margin: 0 auto;
+      font-weight: bold;
+      font-size: $font-size-base;
+    }
+
+    &-navbar-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
