@@ -1,0 +1,7 @@
+node_modules/
+src
+.babelrc
+.eslintrc.js
+.idea
+package-lock.json
+vite.config.ts
