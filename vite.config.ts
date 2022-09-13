@@ -7,8 +7,18 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, './index.js'),
-      name: 'nano',
+      name: 'nanod',
       fileName: 'nanod'
+    },
+    sourcemap: true,
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
+      }
     }
   },
   resolve: {
