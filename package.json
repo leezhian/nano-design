@@ -13,11 +13,13 @@
     "type": "git",
     "url": "https://github.com/leezhian/nano-design.git"
   },
-  "main": "index.js",
+  "files": ["dist"],
+  "main": "./dist/nanod.umd.cjs",
+  "module": "./dist/nanod.js",
   "exports": {
     ".": {
       "import": "./dist/nanod.js",
-      "require": "./dist/nanod.cjs"
+      "require": "./dist/nanod.umd.cjs"
     }
   },
   "scripts": {
