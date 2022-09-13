@@ -1,11 +1,14 @@
 {
   "name": "nano-design",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "author": "kim",
   "license": "ISC",
   "description": "基于 react 的UI集",
-  "keywords": ["nanod", "nano-design"],
+  "keywords": [
+    "nanod",
+    "nano-design"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/leezhian/nano-design.git"
